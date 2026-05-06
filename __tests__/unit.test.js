@@ -11,7 +11,7 @@ import {
 // TODO - Part 2
 
 // isPhoneNumber tests
-test('isPhoneNumber returns true for phone number with area code in parentheses', () => {
+test('isPhoneNumber returns true for phone number with parentheses area code', () => {
   expect(isPhoneNumber('(123) 456-7890')).toBe(true);
 });
 
@@ -19,7 +19,7 @@ test('isPhoneNumber returns true for phone number with dashed area code', () => 
   expect(isPhoneNumber('123-456-7890')).toBe(true);
 });
 
-test('isPhoneNumber returns false for phone number with dots', () => {
+test('isPhoneNumber returns false for phone number using dots', () => {
   expect(isPhoneNumber('123.456.7890')).toBe(false);
 });
 
@@ -28,19 +28,19 @@ test('isPhoneNumber returns false for phone number with too few digits', () => {
 });
 
 // isEmail tests
-test('isEmail returns true for basic email', () => {
+test('isEmail returns true for basic email address', () => {
   expect(isEmail('student@example.com')).toBe(true);
 });
 
-test('isEmail returns true for email with underscore in name', () => {
+test('isEmail returns true for email with underscore in username', () => {
   expect(isEmail('first_last@ucsd.edu')).toBe(true);
 });
 
-test('isEmail returns false for email missing @', () => {
+test('isEmail returns false when missing @ symbol', () => {
   expect(isEmail('student.example.com')).toBe(false);
 });
 
-test('isEmail returns false for email with invalid domain ending', () => {
+test('isEmail returns false when domain ending is too short', () => {
   expect(isEmail('student@example.c')).toBe(false);
 });
 
